@@ -1,8 +1,10 @@
-from func import *
-words = [word for word in open('words.txt').read().split() if len(word) > 3]
+from head import *
 
-word = start(words)
-print(word)
+root = Tk()
+root.title('hangman')
+root.geometry('500x600')
 
-proc(word)
+start(words, root)
+
+root.mainloop()
 
