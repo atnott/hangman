@@ -10,5 +10,5 @@ STAGES = [
 ]
 
 def draw(root, word, cnt):
-    Label(root, text=STAGES[cnt], font=('Courier', 29, 'bold')).pack()
+    Label(root, text=STAGES[cnt], font=('Arial', 29, 'bold')).pack()
     Label(root, text=f'Осталось попыток: {5 - cnt}').pack(side='bottom')

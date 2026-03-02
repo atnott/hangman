@@ -12,14 +12,14 @@ def start(word, root):
     global was, cnt
     cnt = 0; was = ''
     word = words[random.randint(0, len(words) - 1)]
-    Label(root, text='hangman play', font=("Times New Roman",21,"bold")).pack()
+    Label(root, text='hangman play', font=("Arial",21,"bold")).pack()
     btnStart = Button(root, text='Начать игру', command=lambda: proc(root, [word, mask(word)]))
     btnStart.pack()
     return root, [word, mask(word)]
 
 def proc(root, word):
     clear(root); global cnt
-    Label(root, text=f'Слово загадано \n{word[1]}', font=("Times New Roman", 21, "bold")).pack()
+    Label(root, text=f'Слово загадано \n{word[1]}', font=("Arial", 21, "bold")).pack()
     Label(root, text='Введите букву: ').pack()
 
     en = Entry(root); en.pack(); en.focus()
@@ -50,7 +50,7 @@ def availability(root, char, word):
         if cnt < 4: cnt += 1; proc(root, word)
         else:
             clear(root)
-            Label(root, text=f'Вы проиграли! \nИсходное слово: {word[0].upper()}', font=("Times New Roman", 21, "bold")).pack()
+            Label(root, text=f'Вы проиграли! \nИсходное слово: {word[0].upper()}', font=("Arial", 21, "bold")).pack()
             draw(root, word, 5)
             btn = Button(root, text='Новая игра', command=lambda: proc(*start(words, root)))
             btnExit = Button(root, text='Закрыть игру', command=root.destroy)
@@ -65,7 +65,7 @@ def replace_char(word, char):
 def win(root, word):
     if word[0] == word[1].lower():
         clear(root)
-        Label(root, text=f'Вы победили! Слово угадано! \n{word[0].upper()}', font=("Times New Roman", 21, "bold")).pack()
+        Label(root, text=f'Вы победили! Слово угадано! \n{word[0].upper()}', font=("Arial", 21, "bold")).pack()
         btn = Button(root, text='Новая игра', command=lambda: proc(*start(words, root)))
         btnExit = Button(root, text='Закрыть игру', command=root.destroy)
         btn.pack(); btnExit.pack()
