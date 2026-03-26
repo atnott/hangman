@@ -1,9 +1,26 @@
-# Hangman Game 🎮
+# 🪓 Hangman Game
 
-A simple implementation of the classic **Hangman** game written in **Python** using the **Tkinter** library.
+Классическая консольная игра "Виселица" на Python. Угадывайте буквы, открывайте слово и постарайтесь не довести дело до финала на виселице!
 
-## 📝 Description
-The player must guess a hidden word letter by letter. For every incorrect guess, a part of the gallows is drawn. You have **5 attempts** to save the hero!
+## 🚀 Особенности проекта
+- **Модульная архитектура**: Код разделен на пакеты (`src`, `draw`, `data`) для удобной поддержки.
+- **Гибкие настройки**: Количество попыток и символы легко меняются в `config.py`.
+- **Автоматизация**: Управление проектом (запуск, очистка) через `Makefile`.
+- **Работа с файлами**: Список слов подгружается из внешнего текстового файла.
 
-## 🚀 How to Run
-To run this project, you need Python 3.13 and the `python-tk` component installed on your system.
+---
+
+## 📥 Инструкция по установке и запуску
+
+Чтобы запустить игру на своем компьютере, выполните следующие шаги:
+
+Откройте терминал и введите:
+```bash
+# Клонировать репозиторий
+git clone https://github.com/atnott/hangman.git
+
+# Перейти в папку проекта
+cd hangman
+
+# Запустить игру
+make run
